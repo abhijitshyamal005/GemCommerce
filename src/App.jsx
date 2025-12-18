@@ -1,154 +1,385 @@
-import React from 'react';
-import { ShoppingCart, Leaf, Award, Beaker, Sparkles } from 'lucide-react';
+import React from 'react'
+import { ShoppingCart } from 'lucide-react'
 
-export default function DogFoodLanding() {
+export default function DogFoodLanding () {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className='min-h-screen bg-white'>
       {/* Hero Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            What makes us different<br />makes them stronger
-          </h1>
-        </div>
+      <div className='bg-gray-50 py-16'>
+        <div className='max-w-5xl mx-auto px-6'>
+          {/* Heading */}
+          <div className='text-center mb-12'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-1'>
+              What makes us different
+            </h1>
+            <h2 className='text-4xl font-bold text-gray-900'>
+              makes them stronger
+            </h2>
+          </div>
 
-        {/* Features Grid with Bowl Image */}
-        <div className="relative max-w-5xl mx-auto mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left Features */}
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <Leaf className="w-6 h-6 text-green-600" />
+          {/* Features Grid */}
+          <div className='relative mb-12'>
+            {/* Desktop Layout */}
+            <div className='hidden md:grid md:grid-cols-3 gap-8 items-start'>
+              {/* Left Features */}
+              <div className='space-y-16 pt-8'>
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 mt-1'>
+                    <svg
+                      className='w-6 h-6 text-green-600'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M5 13l4 4L19 7'
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>Real Food</h3>
+                    <p className='text-sm text-gray-600'>
+                      Wholesome recipes for dogs with real meat and veggies.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Real Food</h3>
-                  <p className="text-sm text-gray-600">Wholesome recipes for dogs with real meat and veggies.</p>
+
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center flex-shrink-0 mt-1'>
+                    <svg
+                      className='w-6 h-6 text-yellow-600'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>
+                      Premium Ingredient
+                    </h3>
+                    <p className='text-sm text-gray-600'>
+                      Elevating pet care with unmatched safety and quality.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-amber-600" />
+              {/* Center Bowl */}
+              <div className='flex justify-center'>
+                <div className='w-72 h-72 rounded-full overflow-hidden shadow-2xl border-8 border-white flex'>
+                  {/* Left Half */}
+                  <div className='w-1/2 h-full overflow-hidden'>
+                    <img
+                      src='/src/assets/half1.png'
+                      alt='Bowl of dog food'
+                      className='w-full h-full object-cover scale-125'
+                    />
+                  </div>
+
+                  {/* Right Half */}
+                  <div className='w-1/2 h-full overflow-hidden'>
+                    <img
+                      src='/src/assets/half2.png'
+                      alt='Happy dog'
+                      className='w-full h-full object-cover scale-125'
+                    />
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Premium Ingredients</h3>
-                  <p className="text-sm text-gray-600">Elevating pet care with unmatched safety and quality.</p>
+              </div>
+
+              {/* Right Features */}
+              <div className='space-y-16 pt-8'>
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 mt-1'>
+                    <svg
+                      className='w-6 h-6 text-teal-600'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M13 10V3L4 14h7v7l9-11h-7z'
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>Made Fresh</h3>
+                    <p className='text-sm text-gray-600'>
+                      We prioritize maintaining the integrity of whole foods and
+                      nutrients.
+                    </p>
+                  </div>
+                </div>
+
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center flex-shrink-0 mt-1'>
+                    <svg
+                      className='w-6 h-6 text-pink-600'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>
+                      Vet Developed
+                    </h3>
+                    <p className='text-sm text-gray-600'>
+                      We work the vet for dog nutrition, leveraging industry
+                      experience.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Center Bowl Image */}
-            <div className="flex justify-center">
-              <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 flex">
-                  <div className="w-1/2 bg-gradient-to-br from-red-400 to-red-600"></div>
-                  <div className="w-1/2 bg-gradient-to-bl from-amber-600 to-amber-800"></div>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Features (Hidden on mobile, shown as bottom on mobile) */}
-            <div className="space-y-8 md:hidden">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-6 h-6 text-teal-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Made Fresh</h3>
-                  <p className="text-sm text-gray-600">We prioritize maintaining the integrity of whole foods and nutrients.</p>
+            {/* Mobile Layout */}
+            <div className='md:hidden space-y-8'>
+              <div className='flex justify-center mb-8'>
+                <div className='w-64 h-64 rounded-full overflow-hidden shadow-2xl border-8 border-white relative'>
+                  <div className='absolute inset-0 flex'>
+                    <div className='w-1/2 '>
+                      <img
+                        src='/src/assets/half1.png'
+                        alt='Bowl of dog food'
+                        className='w-full h-full object-cover scale-125'
+                      />
+                    </div>
+                    <div className='w-1/2 '>
+                      <img
+                        src='/src/assets/half2.png'
+                        alt='Bowl of dog food'
+                        className='w-full h-full object-cover scale-125'
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0">
-                  <Beaker className="w-6 h-6 text-pink-600" />
+              <div className='grid grid-cols-1 gap-6'>
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0'>
+                    <img
+                      className='w-6 h-6 text-green-600'
+                      src='../src/assets/half1.png'
+                      alt='Real Food Icon'
+                    />
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>Real Food</h3>
+                    <p className='text-sm text-gray-600'>
+                      Wholesome recipes for dogs with real meat and veggies.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Vet Developed</h3>
-                  <p className="text-sm text-gray-600">We work the vet for dog nutrition, leveraging industry experience.</p>
+
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center flex-shrink-0'>
+                    <img
+                      className='w-6 h-6 text-yellow-600'
+                      src='../src/assets/half2.png'
+                      alt='Premium Ingredient Icon'
+                    />
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>
+                      Premium Ingredient
+                    </h3>
+                    <p className='text-sm text-gray-600'>
+                      Elevating pet care with unmatched safety and quality.
+                    </p>
+                  </div>
+                </div>
+
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0'>
+                    <svg
+                      className='w-6 h-6 text-teal-600'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M13 10V3L4 14h7v7l9-11h-7z'
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>Made Fresh</h3>
+                    <p className='text-sm text-gray-600'>
+                      We prioritize maintaining the integrity of whole foods and
+                      nutrients.
+                    </p>
+                  </div>
+                </div>
+
+                <div className='flex items-start gap-3'>
+                  <div className='w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center flex-shrink-0'>
+                    <svg
+                      className='w-6 h-6 text-pink-600'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-gray-900 mb-1'>
+                      Vet Developed
+                    </h3>
+                    <p className='text-sm text-gray-600'>
+                      We work the vet for dog nutrition, leveraging industry
+                      experience.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right features for desktop */}
-          <div className="hidden md:block absolute right-0 top-0 space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                <Sparkles className="w-6 h-6 text-teal-600" />
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 mb-1">Made Fresh</h3>
-                <p className="text-sm text-gray-600">We prioritize maintaining the integrity<br />of whole foods and nutrients.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0">
-                <Beaker className="w-6 h-6 text-pink-600" />
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 mb-1">Vet Developed</h3>
-                <p className="text-sm text-gray-600">We work the vet for dog nutrition,<br />leveraging industry experience.</p>
-              </div>
+          {/* CTA Button */}
+          <div className='text-center'>
+            <button className='bg-orange-500 hover:bg-orange-600 text-white font-medium px-12 py-3 rounded shadow-lg transition-colors duration-200'>
+              Get your dog's healthy meal today!
+            </button>
+            <div className='mt-3 flex items-center justify-center gap-3 text-xs text-gray-500'>
+              <span className='flex items-center gap-1'>
+                <svg
+                  className='w-4 h-4'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
+                  />
+                </svg>
+                30-day money back guarantee
+              </span>
+              <span className='flex items-center gap-1'>
+                <img
+                  src='../src/assets/paypal.png'
+                  alt='paypal'
+                  className='w-6 h-4'
+                />
+                <img
+                  src='../src/assets/visa.png'
+                  alt='visa'
+                  className='w-6 h-4'
+                />
+                <img
+                  src='../src/assets/mastercard.png'
+                  alt='mastercard'
+                  className='w-6 h-4'
+                />
+                <img
+                  src='../src/assets/apple.png'
+                  alt='apple pay'
+                  className='w-6 h-4'
+                />
+                <img
+                  src='../src/assets/gpay.png'
+                  alt='google pay'
+                  className='w-6 h-4'
+                />
+              </span>
             </div>
           </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center mt-12">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-colors duration-200 flex items-center gap-2 mx-auto">
-            <ShoppingCart className="w-5 h-5" />
-            Get your new a healthy meal today!
-          </button>
-          <p className="text-xs text-gray-500 mt-3">30-day worry-free guarantee</p>
         </div>
       </div>
 
       {/* Nutrition Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className='bg-white py-20'>
+        <div className='max-w-6xl mx-auto px-6'>
+          <div className='grid md:grid-cols-2 gap-12 items-center'>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className='text-3xl font-bold text-gray-900 mb-4 leading-tight'>
                 Nutrition is the foundation for longer, healthier lives in dogs.
               </h2>
-              <p className="text-gray-600 mb-8">
-                Food is your dog's base with our scientifically formulated medicine-powered supplements. Give them the nutrition they deserve and watch them thrive with vitality, energy, and the joy of a longer, healthier life.
+              <p className='text-gray-600 mb-8 text-sm leading-relaxed'>
+                Invest in your dog's future with our scientifically formulated
+                nutrient-powered supplements. Give them the nutrition they
+                deserve and watch them thrive with vitality, energy, and the joy
+                of a longer, healthier life.
               </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4">
-                  <span className="text-4xl font-bold text-orange-500">97%</span>
-                  <p className="text-sm text-gray-700">Dogs receive our dry food over adults joining because of lesser functional ingredients and delicious flavor.</p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="text-4xl font-bold text-orange-500">84%</span>
-                  <p className="text-sm text-gray-700">Our dog food provides superior nutrition and a patented probiotic for optimal nutrient absorption.</p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="text-4xl font-bold text-orange-500">92%</span>
-                  <p className="text-sm text-gray-700">Our dog food a high protein and fat digestibility contribute to their ideal quality.</p>
+
+              <div className='mb-8'>
+                <p className='font-bold text-gray-900 mb-4'>Key Points:</p>
+                <div className='space-y-4'>
+                  <div className='flex items-start gap-3'>
+                    <span className='text-4xl font-bold text-orange-500 leading-none'>
+                      97%
+                    </span>
+                    <p className='text-sm text-gray-700 pt-1'>
+                      Dogs choose our dog food over leading brands because of
+                      its real functional ingredients and delicious flavor.
+                    </p>
+                  </div>
+                  <div className='flex items-start gap-3'>
+                    <span className='text-4xl font-bold text-orange-500 leading-none'>
+                      84%
+                    </span>
+                    <p className='text-sm text-gray-700 pt-1'>
+                      Our dog food provides superior nutrition and a patented
+                      probiotic for optimal nutrient absorption.
+                    </p>
+                  </div>
+                  <div className='flex items-start gap-3'>
+                    <span className='text-4xl font-bold text-orange-500 leading-none'>
+                      92%
+                    </span>
+                    <p className='text-sm text-gray-700 pt-1'>
+                      Our dog food's high protein and fat digestibility
+                      contribute to their ideal quality.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-colors duration-200">
+              <button className='bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded shadow-lg transition-colors duration-200'>
                 Give your furry friend the gift of wholesome nutrition
               </button>
             </div>
 
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-full max-w-md h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-teal-400 rounded-lg mx-auto mb-4"></div>
-                    <div className="w-48 h-48 bg-amber-100 rounded-full mx-auto"></div>
-                  </div>
-                </div>
+            <div className='flex justify-center'>
+              <div className='relative'>
+                <img
+                  src='../src/assets/dog1.png'
+                  alt='Happy dog with food'
+                  className='rounded-2xl shadow-2xl w-full object-cover'
+                />
               </div>
             </div>
           </div>
@@ -156,24 +387,29 @@ export default function DogFoodLanding() {
       </div>
 
       {/* Gastrointestinal Health Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <div className="w-full h-96 bg-gradient-to-br from-gray-300 to-gray-400 rounded-2xl shadow-xl flex items-center justify-center">
-                <div className="flex gap-8">
-                  <div className="w-32 h-32 bg-gray-600 rounded-full"></div>
-                  <div className="w-32 h-32 bg-gray-700 rounded-full"></div>
-                </div>
-              </div>
+      <div className='bg-gray-50 py-20'>
+        <div className='max-w-6xl mx-auto px-6'>
+          <div className='grid md:grid-cols-2 gap-12 items-center'>
+            <div className='order-2 md:order-1'>
+              <img
+                src='../src/assets/dog21.gif'
+                alt='Two dogs eating from bowls'
+                className='rounded-2xl shadow-xl w-full'
+              />
             </div>
 
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Improve overall gastrointestinal health for better nutrient absorption
+            <div className='order-1 md:order-2'>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4 leading-tight'>
+                Improve overall gastrointestinal health for better nutrient
+                absorption
               </h2>
-              <p className="text-gray-600">
-                Through rigorous scientific studies and collaboration with veterinarians, we have created a breakthrough formula exclusively tailored to combat the health challenges endemic to dogs. A staggering 85% of our customers have observed remarkable enhancements in their pet's health after incorporating our product into their diet.
+              <p className='text-gray-600 text-sm leading-relaxed'>
+                Through rigorous scientific studies and consultations with
+                veterinarians, we have created a breakthrough formula
+                exclusively tailored to combat the health challenges prevalent
+                in dogs. A staggering 85% of our customers have reported
+                significant improvements in their dogs' health after
+                incorporating our product into their diet.
               </p>
             </div>
           </div>
@@ -181,24 +417,32 @@ export default function DogFoodLanding() {
       </div>
 
       {/* Prebiotics Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className='bg-white py-20'>
+        <div className='max-w-6xl mx-auto px-6'>
+          <div className='grid md:grid-cols-2 gap-12 items-center'>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Prebiotics nourish the beneficial gut bacteria, supporting digestive health
+              <h2 className='text-3xl font-bold text-gray-900 mb-4 leading-tight'>
+                Prebiotics nourish the beneficial gut bacteria, supporting
+                digestive health
               </h2>
-              <p className="text-gray-600">
-                Our dog food formula contains carefully selected prebiotics that work in harmony with the gut microbiota, providing the necessary nutrients to foster a well-balanced and thriving intestinal ecosystem for optimal digestion health.
+              <p className='text-gray-600 text-sm leading-relaxed'>
+                Our dog food formula contains carefully selected prebiotics that
+                work in harmony with the gut microbiota, providing the necessary
+                nutrients for the growth and maintenance of beneficial bacteria,
+                ultimately supporting digestive health.
               </p>
             </div>
 
-            <div className="flex justify-center">
-              <div className="w-full max-w-md h-96 bg-gradient-to-br from-amber-600 to-amber-800 rounded-2xl shadow-2xl"></div>
+            <div className='flex justify-center'>
+              <img
+                src='../src/assets/dog2.jpg'
+                alt='Dog food kibble'
+                className='rounded-2xl shadow-xl w-full max-w-lg'
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
